@@ -1,0 +1,639 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+:root {
+  --orange: rgb(238, 158, 9);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.3s linear;
+}
+*::selection {
+  background: var(--orange);
+  color: white;
+}
+header {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 4rem;
+}
+#menu {
+  border: 0.1rem solid white;
+  cursor: pointer;
+  padding: 1rem;
+  display: none;
+  border-radius: 0.6rem;
+}
+#menu:hover {
+  color: orange;
+}
+header .logo {
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+header .logo span {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+}
+header .navbar a {
+  text-transform: capitalize;
+  color: white;
+  padding: 1.2rem;
+}
+header .navbar a:hover {
+  color: orange;
+}
+header form {
+  font-size: 1.2rem;
+  color: #ff33;
+  display: flex;
+}
+header form input {
+  width: 100%;
+}
+header .icons i {
+  font-size: 3rem;
+  /* color: black; */
+  cursor: pointer;
+}
+header .icons i:hover {
+  color: orange;
+}
+header #search {
+  margin-left: 1rem;
+}
+#login {
+  margin-left: 2rem;
+}
+#s-btn {
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+#s-btn:hover {
+  color: orange;
+}
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  /* margin-top: 8.5rem; */
+  width: 100%;
+  background-color: rgb(35, 30, 30);
+  padding: 1.5rem;
+
+  z-index: 1001;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  border: 0.1rem solid rgba(40, 37, 37, 0.41);
+}
+.search-bar-container {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  /* margin-top: 8.5rem; */
+  width: 100%;
+  background-color: rgb(208, 202, 202);
+  padding: 1.5rem;
+
+  z-index: 1001;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  border: 0.1rem solid rgba(17, 17, 17, 0.41);
+}
+
+.recovery {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  /* transition: all 0.3s linear; */
+}
+
+#login-container {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+#login-container h3 {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #333;
+  text-align: center;
+}
+#login-container .box {
+  margin: 2rem;
+  padding: 0.6rem 1rem;
+  display: block;
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  border: 1px solid #333;
+
+  /* width: 100%; */
+  /* margin: auto; */
+}
+#login-container .box:focus {
+  border: 1px solid orange;
+}
+#login-form {
+  background-color: white;
+  /* clip-path: polygon(0 0, 100% 0,100% 0,0 0); */
+}
+#btn {
+  padding: 0.2rem 2rem;
+  width: 100%;
+  font-size: 2.6rem;
+  color: white;
+  background-color: orange;
+  /* border-radius: 1rem; */
+  text-transform: capitalize;
+}
+#btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#login-container p {
+  font-size: 1.9rem;
+  /* color: white; */
+  text-transform: capitalize;
+  padding: 1rem;
+  text-align: start;
+}
+#login-container a {
+  color: orange;
+  text-transform: capitalize;
+}
+#login-container a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+#close {
+  position: absolute;
+  right: 2rem;
+  top: 16%;
+  color: white;
+  cursor: pointer;
+  font-size: 5rem;
+}
+#close:hover {
+  color: orange;
+}
+/* yahan per recovery k bad space kabi mat dena uff khap gai me */
+#login-container.recovery {
+  top: 0;
+}
+
+/* home section is starting from here */
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  min-height: 100vh;
+  z-index: 0;
+  flex-flow: column;
+}
+section {
+  padding: 2rem 9%;
+}
+#home .content {
+  text-align: center;
+}
+#home h3 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  color: white;
+}
+#home p {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+
+  text-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+#home .video-container video {
+  /* note that we are fitting these properties on video */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* forming the video buttons */
+#home .controls {
+  padding: 1rem;
+  position: relative;
+  border-radius: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 15rem;
+}
+#home .controls .vid-btn {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: whitesmoke;
+  /* margin: .5rem; */
+}
+#home .controls .vid-btn.active {
+  background-color: orange;
+}
+#home .controls .vid-btn:hover {
+  /* background-color: orange; */
+}
+/* book section */
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  /* font-weight: bolder; */
+  color: orange;
+  padding: 2.5rem 0;
+}
+.heading span {
+  background-color: rgba(265, 165, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  font-size: 3.5rem;
+}
+.heading span.space {
+  background: none;
+}
+.book .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.row .image {
+  /* maybe its margin from right that is 40 */
+  flex: 1 1 40rem;
+}
+.row .image img {
+  width: 100%;
+}
+.book .row form {
+  flex: 1 1 40rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+.book .row form .inputBox {
+  padding: 0.5rem 0;
+}
+.book .row form .inputBox input {
+  text-transform: none;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 1.7rem;
+  padding: 1rem;
+  color: #333;
+  width: 100%;
+}
+.book .row form .inputBox h3 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  color: #666;
+}
+.stars i {
+  color: orange;
+  font-size: 2rem;
+}
+/* packages */
+.packages .boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* justify-content: space-around; */
+}
+.packages .boxContainer .box {
+  flex: 1 1 40rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.packages .boxContainer .box img {
+  object-fit: cover;
+  width: 100%;
+  height: 25rem;
+}
+.packages .boxContainer .box .content {
+  padding: 2rem;
+  font-size: 2rem;
+}
+.content h3 {
+  text-transform: capitalize;
+  font-size: 3.5rem;
+  color: #333;
+}
+.content h3 i {
+  color: orange;
+}
+.content p {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #333;
+}
+.content .price {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+.content .price span {
+  color: #666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.services .boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.services .boxContainer .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  /* box-shadow: 0.1rem .1rem .1rem rgba(0,0,0,.1); */
+}
+.services .boxContainer .box h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #333;
+}
+.services .boxContainer .box i {
+  font-size: 5rem;
+  color: orange;
+  padding: 1rem;
+}
+.services .boxContainer .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.services .boxContainer .box:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+/* gallery */
+.gallery .boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.gallery .boxContainer .box {
+  flex: 1 1 50rem;
+  border: 1rem solid white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  /* this is done so as to show the content which was to hide */
+  position: relative;
+}
+.gallery .box img {
+  width: 100%;
+  /* we did this to hide the content */
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .boxContainer .box .content {
+  position: absolute;
+  /* ab conetent ko urrane k liy top sy -120% */
+  top: -120%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+.gallery .boxContainer .box:hover .content {
+  top: 0;
+}
+.gallery .boxContainer .box .content h3 {
+  font-size: 3rem;
+  color: orange;
+}
+.gallery .boxContainer .box .content p {
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 0.5rem 0;
+}
+/* review */
+
+.review .wrapper .box img {
+  height: 25rem;
+  width: 25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.review .review-slider {
+  padding-bottom: 2rem;
+}
+.review .box {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.review .box h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.review .box p {
+  font-size: 2rem;
+  color: #666;
+  padding: 1rem;
+}
+.review .box .stars i {
+  color: orange;
+  font-size: 3rem;
+}
+/* contact */
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.contact .row img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row .img {
+  flex: 1 1 35rem;
+}
+.contact .row form {
+  flex: 1 1 50rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.contact .row form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.contact .row form input,
+textarea {
+  background-color: #f7f7f7;
+  padding: 1rem;
+
+  /* width: 100%; */
+  color: #666;
+}
+.contact .row form textarea {
+  height: 15rem;
+  width: 100%;
+}
+/* brand section */
+.brand-container .brand-slider img {
+  height: 25rem;
+}
+.footer {
+  background: #333;
+}
+.footer .boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer .boxContainer .box {
+  padding: 1rem 0;
+  flex: 1 1 30rem;
+}
+.footer .boxContainer .box h3 {
+  font-size: 2.6rem;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0.7rem 0;
+}
+.footer .boxContainer .box p {
+  font-size: 2rem;
+  color: #eee;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+.footer .boxContainer .box a {
+  font-size: 2rem;
+  color: #eee;
+  text-transform: capitalize;
+  padding: 1rem;
+  display: block;
+}
+.footer .boxContainer .box a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+.credit {
+  text-align: center;
+  text-transform: capitalize;
+  color: #666;
+  font-size: 2rem;
+  margin-top: 2rem;
+  border-top: 0.2rem solid #666;
+  padding: 2rem 1rem;
+}
+.credit span {
+  color: orange;
+  font-size: 2.3rem;
+}
+
+body {
+  /* height: 300rem; */
+}
+
+/* media queries */
+@media (max-width: 1015px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+}
+@media (max-width: 733px) {
+  html {
+    font-size: 50%;
+  }
+  .contact .row form input,
+  textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 636px) {
+  html {
+    font-size: 43%;
+  }
+}
+@media (max-width: 770px) {
+  #menu {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgb(87, 86, 86);
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .navbar a {
+    padding: 1.5rem;
+    background-color: rgb(70, 69, 69);
+    margin: 1.5rem 0;
+  }
+  .navbar.recovery {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
